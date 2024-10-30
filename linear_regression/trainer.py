@@ -7,7 +7,7 @@ from .data import x_train, y_train
 from .model import LinearRegression
 
 # Device
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device(device="cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using {device} device")
 print(f"Threads: torch.get_num_threads(): {torch.get_num_threads()}")
 print(f"Cuda Cores: torch.cuda.device_count(): {torch.cuda.device_count()}")
@@ -40,4 +40,9 @@ for epoch in range(EPOCH):
         print(f"Epoch [{epoch+1}/{EPOCH}], Loss: {loss.item():.4f}")
 
 
-save_model(model=model, model_version="v1", dir="checkpoints")
+# torch.save(obj=model.state_dict(), f="linear_regression/checkpoints/model-v1.pth")
+saved_model_name: str = save_model(
+    model=model, model_version="v1", dir="linear_regression/checkpoints"
+)
+
+print(model.state_dict())

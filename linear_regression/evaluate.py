@@ -1,14 +1,13 @@
 import torch
 
-from utils.utils import get_newest_filename
-
 from .data import x_test, y_test
-from .trainer import criterion, model
+from .trainer import criterion, model, saved_model_name
+
+if saved_model_name is None:
+    raise ValueError(f"No suitable model {saved_model_name} file found")
+model.load_state_dict(state_dict=torch.load(f=saved_model_name))
 
 # Set the model to evaluation mode
-model_name = get_newest_filename(directory="checkpoints")
-print(f"Loading model: {model_name}")
-model.load_state_dict(state_dict=torch.load(f=model_name))
 model.eval()
 # Disable gradient calculation
 with torch.no_grad():

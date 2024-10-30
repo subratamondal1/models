@@ -24,3 +24,6 @@ deploy:
 
 fastapi:
 	poetry run uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+linear-regression:
+	poetry run python3 -m linear_regression.evaluate
