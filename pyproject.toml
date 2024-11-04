@@ -15,12 +15,9 @@ numpy = "^2.1.2"
 mlflow = "^2.17.1"
 scikit-learn = "^1.5.2"
 pandas = "^2.2.3"
-<<<<<<< HEAD
 ipykernel = "^6.29.5"
 matplotlib = "^3.9.2"
 torch = "2.2.2"
-=======
->>>>>>> f48abe7 (Logistic Regression Setup)
 torchvision = "0.17.2"
 
 
@@ -30,5 +27,3 @@ ipykernel = "^6.29.5"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-
