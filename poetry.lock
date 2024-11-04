@@ -3368,4 +3368,8 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
+<<<<<<< HEAD
 content-hash = "058ae36554f56e9fde3fc54fec4c3d208746fc97df6953ec4dea301cedda7cc9"
+=======
+content-hash = "cc440676b2398f848dc498b2db83ee0c8ff94ee6dc07bea54963524fbd0db9d7"
+>>>>>>> f48abe7 (Logistic Regression Setup)
